@@ -43,6 +43,7 @@ def main():
 
     print(stack1.elements)
     data = stack1.pop()
+    print(stack1.top.data)
 
     print(stack1.elements)
     data = stack1.pop()
@@ -50,7 +51,7 @@ def main():
     print(stack1.elements)
 
     # теперь последний элемент содержит данные data4
-    print(stack1.top.data)
+    print(stack1.top)
 
     # данные удаленного элемента
     print(data)
