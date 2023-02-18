@@ -3,36 +3,58 @@ from utils.node import Node
 
 
 def main():
+    print("Добавление")
     n1 = Node(5, None)
+    n2 = Node('a', n1)
+    print(n1.data)
+    print(n2.data)
     print(n1)
-
-# Результаты вывода в консоли
-#5
-#a
-#<__main__.Node object at 0x0000022803036050>
-#<__main__.Node object at 0x0000022803036050>
+    print(n2.next_node)
 
     stack = Stack()
     stack.push('data1')
     stack.push('data2')
     stack.push('data3')
-    #print(stack.top.data)
-    #print(stack.top.next_node.data)
-    #print(stack.top.next_node.next_node.data)
-    #print(stack.top.next_node.next_node.next_node)
+    print(stack.top.data)
+    print(stack.top.next_node.data)
+    print(stack.top.next_node.next_node.data)
+    print(stack.top.next_node.next_node.next_node)
     #print(stack.top.next_node.next_node.next_node.data)
-  # Результаты вывода в консоли
-  #data3
-  #data2
-  #data1
-  #None
-  #Traceback (most recent call last):
-    #File "-//-//-", line 29, in <module>
-      #print(stack.top.next_node.next_node.next_node.data)
-  #          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  #AttributeError: 'NoneType' object has no attribute 'data'
+
+    stack = Stack()
+    stack.push('data1')
+    data = stack.pop()
+
+    # стэк стал пустой
+    print(stack.top)
+
+    # pop() удаляет элемент и возвращает данные удаленного элемента
+    print(data)
+    'data1'
+
+    print(f"\nУдаление")
+    stack1 = Stack()
+    stack1.push('data4')
+    stack1.push('data5')
+    stack1.push('data6')
+
+    print(stack1.elements)
+    data = stack1.pop()
+
+    print(stack1.elements)
+    data = stack1.pop()
+
+    print(stack1.elements)
+    data = stack1.pop()
+
+    print(stack1.elements)
+
+    # теперь последний элемент содержит данные data4
+    print(stack1.top.data)
+
+    # данные удаленного элемента
+    print(data)
 
 
 if __name__ == "__main__":
     main()
-
