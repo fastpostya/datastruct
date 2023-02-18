@@ -28,6 +28,3 @@ class Node():
         return str(self.data)
         #return text
 
-    def next_node(self) -> "Node":
-        """метод возвращает указатель на следующий элемент"""
-        return self.next_node

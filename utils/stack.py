@@ -1,4 +1,4 @@
-from node import Node
+from utils.node import Node
 
 
 class Stack():
@@ -53,7 +53,3 @@ class Stack():
         else:
             self.top = None
             return None
-
-    def data(self) -> object:
-        """функция возвращает данные, хранящиеся в data"""
-        return self.data
