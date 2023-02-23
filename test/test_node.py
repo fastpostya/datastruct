@@ -1,6 +1,6 @@
 import unittest
 #import pytest
-from test.node import Node
+from utils.node import Node
 
 
 class Test_Node(unittest.TestCase):

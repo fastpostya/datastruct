@@ -1,5 +1,5 @@
 import unittest
-from node import Node
+from utils.node import Node
 from utils.stack import Stack
 
 
@@ -35,7 +35,9 @@ class Test_Stack(unittest.TestCase):
         self.assertEqual(len(self.stack.elements), 1)
         self.assertEqual(self.stack.pop().data, self.node_10.data)
         self.assertEqual(len(self.stack.elements), 0)
-        self.assertIsNone(self.stack.pop())
+        #self.assertRaises(self.stack.pop(), IndexError("В стэке нет элементов"))
+        with self.assertRaises(IndexError):
+            self.stack.pop()
 
     def test_data(self):
         self.node_10 = Node(10)
