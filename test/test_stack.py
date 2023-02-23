@@ -1,5 +1,5 @@
 import unittest
-from utils.node import Node
+from node import Node
 from utils.stack import Stack
 
 
