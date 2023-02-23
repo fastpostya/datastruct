@@ -40,7 +40,9 @@ class Stack():
     def pop(self) -> Node:
         """функция удаляет последний элемент из стэка 
         и возвращает его данные"""
-        if len(self.elements) == 1:
+        if len(self.elements) == 0:
+            raise IndexError("В стэке нет элементов")
+        elif len(self.elements) == 1:
             last_node = self.top
             self.elements.pop()
             self.top = None

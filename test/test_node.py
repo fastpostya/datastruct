@@ -2,6 +2,7 @@ import unittest
 #import pytest
 from utils.node import Node
 
+
 class Test_Node(unittest.TestCase):
     def SetUp(self):
         self.node = Node()
