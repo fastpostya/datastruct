@@ -25,6 +25,6 @@ class Node():
         # for item in self.__dict__:
         #     text += f'Node({str(item)}={self.__dict__[item]}), '
         # text[:-2]
-        return str(self.data)
+        return f"Node(self.data)"
         #return text
 
