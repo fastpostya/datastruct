@@ -46,7 +46,6 @@ def main():
     # print(stack1.elements)
     # data = stack1.pop()
 
-    # print(stack1.elements)
 
     # # теперь последний элемент содержит данные data4
     # print(stack1.top.data)
@@ -54,8 +53,6 @@ def main():
     # # удаление элемента из пустого стэка
     # # data = stack1.pop()
 
-    # # данные удаленного элемента
-    # print(data)
 
     # Задание 3
     print("Очередь. Добавление.")
