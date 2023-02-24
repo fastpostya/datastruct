@@ -59,5 +59,5 @@ class Queue():
             # после удаления будет хотя бы один элемент
             first_node = self.head
             self.elements.pop(0)
-            self.head = self.elements
+            self.head = self.elements[0]
             return first_node
