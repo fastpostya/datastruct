@@ -37,7 +37,7 @@ class Test_Queue(unittest.TestCase):
         queue.dequeue()
         queue.dequeue()
         self.assertEqual(len(queue.elements), 2)
-        self.assertEqual(queue.dequeue().data, node_30.data)
+        self.assertEqual(queue.dequeue(), node_30.data)
         queue.dequeue()
         self.assertEqual(len(queue.elements), 0)
         with self.assertRaises(IndexError):
