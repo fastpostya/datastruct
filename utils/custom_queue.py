@@ -60,4 +60,13 @@ class Queue():
             first_node = self.head
             self.elements.pop(0)
             self.head = self.elements[0]
-            return first_node.data
+            return first_node
+
+        # вариант проще:
+        # if self.head is None:
+        #     return None
+        # removed_data = self.head.data
+        # self.head = self.head.next_node
+        # if self.head is None:
+        #     self.tail = None
+        # return removed_data
