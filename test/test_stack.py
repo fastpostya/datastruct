@@ -42,6 +42,6 @@ class Test_Stack(unittest.TestCase):
     def test_data(self):
         self.node_10 = Node(10)
         self.stack = Stack()
-        self.stack.push(self.node_10)
+        self.stack.push(self.node_10.data)
         self.assertEqual(str(self.stack.top.data), "10")
 
