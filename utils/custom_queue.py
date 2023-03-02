@@ -45,7 +45,7 @@ class Queue():
 
     def dequeue(self) -> Node: 
         """ Метод удаления элемента из начала очереди. 
-        Возвращает удаленный элемент"""
+        Возвращает data удаленного элемента"""
         if len(self.elements) == 0:
             raise IndexError("В очереди нет элементов")
         elif len(self.elements) == 1:
@@ -54,7 +54,7 @@ class Queue():
             self.head = None
             self.tail = None
             self.elements.pop(0)
-            return first_node
+            return first_node.data
         else:
             # после удаления будет хотя бы один элемент
             first_node = self.head
