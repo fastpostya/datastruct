@@ -21,10 +21,10 @@ class Node():
         возвращает только данные data
         полное представление закомментировано для последущей реализации
         """
-        # text = ""
-        # for item in self.__dict__:
-        #     text += f'Node({str(item)}={self.__dict__[item]}), '
-        # text[:-2]
-        return f"Node(self.data)"
-        #return text
+        text = ""
+        for item in self.__dict__:
+            text += f'Node({str(item)}={self.__dict__[item]}), '
+        text = text[:-2]
+        # return f"Node(self.data)"
+        return text
 
