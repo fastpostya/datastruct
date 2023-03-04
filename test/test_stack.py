@@ -4,27 +4,21 @@ from utils.stack import Stack
 
 
 class Test_Stack(unittest.TestCase):
-    def SetUp(self):
-        self.stack = Stack()
-        self.node = Node(10)
-
-    def test_stack__init__(self):
-        self.node_10 = Node(10)
-        self.assertEqual(Node(10).data, self.node_10.data)
-
-    def test_push(self):
+    def setUp(self):
         self.stack = Stack()
         self.node_10 = Node(10)
         self.node_20 = Node(20)
+        self.node_30 = Node(30)
+
+    def test_stack__init__(self):
+        self.assertEqual(Node(10).data, self.node_10.data)
+
+    def test_push(self):
         self.stack.push(self.node_10)
         self.stack.push(self.node_20)
         self.assertEqual(len(self.stack.elements), 2)
 
     def test_pop(self):
-        self.stack = Stack()
-        self.node_10 = Node(10)
-        self.node_20 = Node(20)
-        self.node_30 = Node(30)
         self.stack.push(self.node_10)
         self.stack.push(self.node_20)
         self.stack.push(self.node_30)
@@ -40,8 +34,6 @@ class Test_Stack(unittest.TestCase):
             self.stack.pop()
 
     def test_data(self):
-        self.node_10 = Node(10)
-        self.stack = Stack()
         self.stack.push(self.node_10.data)
         self.assertEqual(str(self.stack.top.data), "10")
 
