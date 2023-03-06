@@ -38,8 +38,23 @@ class Test_ll__init__(unittest.TestCase):
         self.assertEqual(self.full_ll.head.data, self.node_3.data)
         self.assertEqual(self.full_ll.tail.data, self.node_0.data)
 
-    def test_print_ll(self):
-        """тестирование метода print_ll"""
-        self.full_ll.insert_beginning(self.node_0.data)
-        self.assertIsNone(self.full_ll.print_ll())
+    def test_print_ll_none(self):
+        """тестирование метода print_ll с пустым списком"""
+        expected_output = " -> None"
         self.assertIsNone(self.empty_ll.print_ll())
+
+    def test_print_ll_multiple_elements(self):
+        """тестирование метода print_ll с непустым списком"""
+        self.full_ll = LinkedList()
+        self.full_ll.insert_beginning(self.node_0.data)
+        self.full_ll.insert_beginning(self.node_1.data)
+        self.full_ll.insert_beginning(self.node_2.data)
+        self.full_ll.insert_beginning(self.node_3.data)
+        expected_output = "{'id': 3} -> {'id': 2} -> {'id': 1} -> {'id': 0} -> None"
+        
+        with captured_output() as (out, err):
+            self.full_ll.print_ll()
+        self.assertEqual(out.strip(), expected_output)
+        
+
+
