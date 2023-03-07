@@ -51,8 +51,8 @@ class LinkedList():
         """Выводит на печать содержимое связанного списка"""
         ll_string = ''
         node = self.head
-        if node is None:
-            print(None)
+        # if node is None:
+        #     print(None)
         while node:
             ll_string += f' {str(node.data)} ->'
             node = node.next_node

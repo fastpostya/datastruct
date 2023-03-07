@@ -1,4 +1,6 @@
 import unittest
+from io import StringIO
+from contextlib import redirect_stdout
 from utils.node import Node
 from utils.linked_list import LinkedList
 
@@ -40,8 +42,11 @@ class Test_ll__init__(unittest.TestCase):
 
     def test_print_ll_none(self):
         """тестирование метода print_ll с пустым списком"""
-        expected_output = " -> None"
-        self.assertIsNone(self.empty_ll.print_ll())
+        expected_output = "None"
+        f = StringIO()
+        with redirect_stdout(f):
+            self.empty_ll.print_ll()
+        self.assertEqual(f.getvalue().strip(), expected_output)
 
     def test_print_ll_multiple_elements(self):
         """тестирование метода print_ll с непустым списком"""
@@ -51,10 +56,7 @@ class Test_ll__init__(unittest.TestCase):
         self.full_ll.insert_beginning(self.node_2.data)
         self.full_ll.insert_beginning(self.node_3.data)
         expected_output = "{'id': 3} -> {'id': 2} -> {'id': 1} -> {'id': 0} -> None"
-        
-        with captured_output() as (out, err):
+        f = StringIO()
+        with redirect_stdout(f):
             self.full_ll.print_ll()
-        self.assertEqual(out.strip(), expected_output)
-        
-
-
+        self.assertEqual(f.getvalue().strip(), expected_output)

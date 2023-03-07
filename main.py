@@ -65,6 +65,7 @@ def main():
     #Задание 5
     print("Связанный список")
     ll = LinkedList()
+    ll.print_ll()
     ll.insert_beginning({'id': 1})
     ll.insert_at_end({'id': 2})
     ll.insert_at_end({'id': 3})

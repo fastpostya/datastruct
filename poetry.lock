@@ -4,7 +4,7 @@
 name = "coverage"
 version = "7.2.1"
 description = "Code coverage measurement for Python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -67,4 +67,4 @@ toml = ["tomli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "0fee050aaaa90c732f431393b4517aa24a73f7c8434853d5aff3f428bbddd350"
+content-hash = "ba7b3e074418c090774de5e2906d903db3890da4d04bddb29f1c78b86f4a030f"
