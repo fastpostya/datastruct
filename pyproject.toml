@@ -10,6 +10,7 @@ python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
 coverage = "^7.2.1"
+ipykernel = "^6.21.3"
 
 [build-system]
 requires = ["poetry-core"]
