@@ -68,7 +68,8 @@ class Test_ll__init__(unittest.TestCase):
         self.full_ll.insert_at_end(self.node_1.data)
         self.full_ll.insert_at_end(self.node_2.data)
         self.full_ll.insert_at_end(self.node_3.data)
-        self.assertEqual(self.full_ll.to_list(), [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}])
+        self.assertEqual(self.full_ll.to_list(), \
+        [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}])
 
     def test_get_data_by_id(self):
         self.full_ll.insert_at_end(self.node_0.data)
@@ -105,7 +106,8 @@ class Test_ll__init__(unittest.TestCase):
 
     def test_get_data_by_id_empty(self):
         """Поиск в пустом списке несуществующего значения"""
-        self.assertIsNone(self.empty_ll.get_data_by_id(7))
+        with self.assertRaises(IndexError):
+            self.assertIsNone(self.empty_ll.get_data_by_id(7))
 
     def test_get_data_by_id_not_empty(self):
         """Поиск в непустом списке несуществующего значения"""
@@ -113,4 +115,5 @@ class Test_ll__init__(unittest.TestCase):
         self.full_ll.insert_at_end(self.node_1.data)
         self.full_ll.insert_at_end(self.node_2.data)
         self.full_ll.insert_at_end(self.node_3.data)
-        self.assertIsNone(self.full_ll.get_data_by_id(7))
+        with self.assertRaises(IndexError):
+            self.assertIsNone(self.full_ll.get_data_by_id(7))
