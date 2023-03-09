@@ -73,7 +73,8 @@ class LinkedList():
 
     def to_list(self) -> list:
         """
-        возвращает список с данными, содержащимися в односвязном списке LinkedList
+        возвращает список с данными, содержащимися в 
+        односвязном списке LinkedList
         """
         date_list = []
         current = self.head
@@ -91,6 +92,8 @@ class LinkedList():
         в метод значению. 
         В случае, если data не является словарем, выбрасывается 
         исключение TypeError, если в словаре нет ключа id- KeyError.
+        Если элемент не найден в списке - IndexError.
+
         """
         current = self.head
         while current:
@@ -108,5 +111,7 @@ class LinkedList():
                         current = current.next_node
                     else:
                         # дошли до последнего узла в списке
+                        raise IndexError(f"Словарь с ключем id={id} не найден")
                         break
-
+        else:
+            raise IndexError(f"Словарь с ключем id={id} не найден")

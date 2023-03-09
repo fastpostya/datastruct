@@ -66,10 +66,11 @@ def task_3_4():
     print(queue.dequeue())
     print(queue.dequeue())
 
+
 def task_5():
     """работа с односвязным списком
     """
-       #Задание 5
+    #Задание 5
     print("Связанный список")
     ll = LinkedList()
     ll.print_ll()
@@ -78,6 +79,7 @@ def task_5():
     ll.insert_at_end({'id': 3})
     ll.insert_beginning({'id': 0})
     ll.print_ll()
+
 
 def task_6():
     """работа с односвязным списком
@@ -90,32 +92,33 @@ def task_6():
     ll.insert_beginning({'id': 0, 'username': 'serebro'})
     ll.print_ll()
 
-# метод to_list()
+    # метод to_list()
     lst = ll.to_list()
     for item in lst: print("item=", item)
 
     # get_data_by_id()
     user_data = ll.get_data_by_id(3)
     print(user_data)
-# {'id': 3, 'username': 'mosh_s'}
+    # {'id': 3, 'username': 'mosh_s'}
 
-# работа блока try/except
+    # работа блока try/except
     ll = LinkedList()
     ll.insert_beginning({'id': 1, 'username': 'lazzy508509'})
-    ll.insert_at_end('idusername')
-    ll.insert_at_end([1, 2, 3])
+    # ll.insert_at_end('idusername')
+    # ll.insert_at_end([1, 2, 3])
     ll.insert_at_end({'id': 2, 'username': 'mosh_s'})
 
     try:
-        user_data = ll.get_data_by_id(2)
+        user_data = ll.get_data_by_id(10)
     except TypeError as error:
         print(error)
     except KeyError as error:
         print(error)
+    except IndexError as error:
+        print(error)
     except:
         print("Неизвестная ошибка")
     print(user_data)
-
 
 
 def main():
@@ -123,7 +126,6 @@ def main():
     # task_3_4()
     # task_5()
     task_6()
-    
 
 
 if __name__ == "__main__":
