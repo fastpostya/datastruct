@@ -92,6 +92,8 @@ class LinkedList():
         в метод значению. 
         В случае, если data не является словарем, выбрасывается 
         исключение TypeError, если в словаре нет ключа id- KeyError.
+        Если элемент не найден в списке - IndexError.
+
         """
         current = self.head
         while current:
